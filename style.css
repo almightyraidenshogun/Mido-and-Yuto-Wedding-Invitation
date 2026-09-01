@@ -1,0 +1,1927 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FFF9ED;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    height: 92px;
+    background: #0D0D0D;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 4.5%;
+
+    position: relative;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+}
+
+.nav-links a {
+    color: #FFF9ED;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #C6A15B;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -13px;
+
+    height: 1px;
+
+    background: #FFF9ED;
+}
+
+
+/* =========================================
+   MENU BUTTON
+========================================= */
+
+.menu-button {
+    margin-left: auto;
+
+    width: 49px;
+    height: 49px;
+
+    border: 1px solid #C6A15B;
+    border-radius: 50%;
+
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+
+    width: 17px;
+    height: 1px;
+
+    background: #FFF9ED;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: calc(100vh - 92px);
+
+    background: #FFF9ED;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    text-align: center;
+
+    padding-top: 70px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.small-heading {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.7;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 9vw, 120px);
+
+    font-weight: 400;
+
+    letter-spacing: 10px;
+
+    margin: 32px 0 12px;
+
+    line-height: 0.95;
+}
+
+
+/* =========================================
+   AND
+========================================= */
+
+.and-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 15px auto;
+}
+
+.line {
+    width: 165px;
+
+    height: 1px;
+
+    background: #C6A15B;
+}
+
+.and {
+    color: #C6A15B;
+
+    font-family: cursive;
+
+    font-size: 43px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 42px;
+
+    gap: 42px;
+}
+
+.date-side {
+    font-size: 19px;
+
+    letter-spacing: 4px;
+}
+
+.date-number {
+    font-size: 72px;
+
+    font-weight: 400;
+
+    padding: 0 45px;
+
+    border-left: 1px solid #C6A15B;
+    border-right: 1px solid #C6A15B;
+}
+
+.day {
+    margin-top: 27px;
+
+    font-size: 19px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.gold-divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 28px auto;
+
+    width: 300px;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #C6A15B;
+}
+
+.gold-divider span {
+    color: #C6A15B;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FLOWER DECORATIONS
+========================================= */
+
+.flower {
+    position: absolute;
+
+    color: #111111;
+
+    font-family: Georgia, serif;
+
+    z-index: 2;
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+.flower-left {
+    left: -70px;
+    bottom: 90px;
+
+    font-size: 300px;
+
+    transform: rotate(-25deg);
+}
+
+.flower-right {
+    right: -70px;
+    top: -80px;
+
+    font-size: 300px;
+
+    transform: rotate(30deg);
+}
+
+
+/* =========================================
+   VENUE
+========================================= */
+
+.venue {
+    margin-top: auto;
+
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+    text-align: center;
+
+    min-height: 250px;
+
+    padding: 50px 20px 60px;
+
+    position: relative;
+
+    border-top: 1px solid #C6A15B;
+
+    clip-path: ellipse(75% 70% at 50% 100%);
+}
+
+.venue-decoration {
+    color: #C6A15B;
+
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+
+.venue h2 {
+    font-size: 21px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.venue p {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================
+   RSVP BUTTON
+========================================= */
+
+.rsvp-button {
+    display: inline-block;
+
+    padding: 13px 75px;
+
+    border: 1px solid #C6A15B;
+
+    color: #C6A15B;
+
+    font-size: 16px;
+
+    letter-spacing: 3px;
+
+    transition: all 0.3s ease;
+}
+
+.rsvp-button:hover {
+    background: #C6A15B;
+
+    color: #0D0D0D;
+}
+
+
+/* =========================================
+   CONTENT SECTIONS
+========================================= */
+
+.content-section {
+    min-height: 550px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #FFF9ED;
+}
+
+.content-section h2 {
+    font-size: 60px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin: 15px 0 25px;
+}
+
+.content-section p {
+    max-width: 600px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+}
+
+.section-label {
+    color: #C6A15B;
+
+    font-size: 13px !important;
+
+    letter-spacing: 4px !important;
+}
+
+.dark-section {
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+}
+
+.dark-section .section-label {
+    color: #C6A15B;
+}
+
+
+/* =========================================
+   TEXT BUTTON
+========================================= */
+
+.text-button {
+    margin-top: 35px;
+
+    border-bottom: 1px solid #C6A15B;
+
+    padding-bottom: 7px;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+}
+
+.dark-section .text-button {
+    color: #FFF9ED;
+}
+
+.text-button:hover {
+    color: #C6A15B;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer p {
+    letter-spacing: 5px;
+
+    font-size: 17px;
+}
+
+footer span {
+    display: block;
+
+    color: #C6A15B;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 75px;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+        right: 0;
+
+        background: #0D0D0D;
+
+        flex-direction: column;
+
+        padding: 30px;
+
+        gap: 25px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: 5px;
+    }
+
+    .small-heading {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+    .line {
+        width: 70px;
+    }
+
+    .and {
+        font-size: 32px;
+    }
+
+    .date {
+        gap: 15px;
+    }
+
+    .date-number {
+        font-size: 50px;
+
+        padding: 0 20px;
+    }
+
+    .date-side {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+    .day {
+        font-size: 13px;
+    }
+
+    .flower-left,
+    .flower-right {
+        opacity: 0.25;
+
+        font-size: 180px;
+    }
+
+    .venue {
+        clip-path: none;
+
+        min-height: 270px;
+    }
+
+    .content-section h2 {
+        font-size: 43px;
+    }
+
+    .rsvp-button {
+        padding: 13px 45px;
+    }
+}
+
+/* =========================================
+   ENTOURAGE PAGE
+========================================= */
+
+.entourage-intro {
+    min-height: 430px;
+}
+
+
+/* =========================================
+   ENTOURAGE SECTIONS
+========================================= */
+
+.entourage-list-section {
+
+    background: #FFF9ED;
+
+    padding: 90px 8% 100px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   DARK SECTION
+========================================= */
+
+.dark-entourage {
+
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.entourage-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.entourage-heading h3 {
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.heading-line {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #C6A15B;
+
+}
+
+
+/* =========================================
+   PRINCIPAL SPONSORS
+========================================= */
+
+.sponsors-list {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    column-gap: 100px;
+
+    row-gap: 35px;
+
+}
+
+
+.sponsor-group {
+
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid
+                rgba(198, 161, 91, 0.35);
+
+}
+
+
+.sponsor-title {
+
+    font-size: 14px;
+
+    color: #C6A15B;
+
+    letter-spacing: 2px;
+
+    min-width: 42px;
+
+}
+
+
+.sponsor-name {
+
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================
+   GROOMSMEN / BRIDESMAIDS
+========================================= */
+
+.party-grid {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 100px;
+
+}
+
+
+.party-column h4 {
+
+    color: #C6A15B;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+}
+
+
+.party-column ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.party-column li {
+
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid
+                rgba(198, 161, 91, 0.3);
+
+}
+
+
+/* =========================================
+   FLOWER GIRL / BOY
+========================================= */
+
+.single-list {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+}
+
+
+.single-list p {
+
+    font-size: 19px;
+
+    letter-spacing: 2px;
+
+    padding: 15px 0;
+
+}
+
+
+.single-list p + p {
+
+    border-top: 1px solid
+                rgba(198, 161, 91, 0.35);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .entourage-list-section {
+
+        padding: 70px 25px;
+
+    }
+
+
+    .entourage-heading {
+
+        gap: 12px;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .entourage-heading h3 {
+
+        font-size: 18px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .heading-line {
+
+        width: 45px;
+
+    }
+
+
+    .sponsors-list {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .party-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .sponsor-name {
+
+        font-size: 16px;
+
+    }
+
+
+    .party-column li {
+
+        font-size: 16px;
+
+    }
+
+
+    .single-list p {
+
+        font-size: 17px;
+
+    }
+
+}
+
+/* =========================================
+   DETAILS PAGE
+========================================= */
+
+.details-intro {
+    min-height: 430px;
+}
+
+
+/* =========================================
+   DETAILS SECTIONS
+========================================= */
+
+.details-section {
+
+    background: #FFF9ED;
+
+    padding: 90px 8% 100px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   DARK DETAILS SECTION
+========================================= */
+
+.dark-details {
+
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+}
+
+
+/* =========================================
+   DETAILS HEADING
+========================================= */
+
+.details-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 65px;
+
+}
+
+
+.details-heading h3 {
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+
+.details-heading span {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #C6A15B;
+
+}
+
+
+/* =========================================
+   WEDDING DETAILS GRID
+========================================= */
+
+.details-grid {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+
+}
+
+
+.detail-item {
+
+    padding: 25px;
+
+}
+
+
+.detail-icon {
+
+    color: #C6A15B;
+
+    font-size: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.detail-label {
+
+    color: #C6A15B;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.detail-item h4 {
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.detail-item p:last-child {
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   VENUE
+========================================= */
+
+.venue-details {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+
+.venue-symbol {
+
+    color: #C6A15B;
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.venue-details h4 {
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.venue-address {
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.venue-note {
+
+    max-width: 550px;
+
+    margin: 30px auto;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #ddd;
+
+}
+
+
+/* =========================================
+   MAP BUTTON
+========================================= */
+
+.map-button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 14px 45px;
+
+    border: 1px solid #C6A15B;
+
+    color: #C6A15B;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.map-button:hover {
+
+    background: #C6A15B;
+
+    color: #0D0D0D;
+
+}
+
+
+/* =========================================
+   DRESS CODE
+========================================= */
+
+
+/* =========================================
+   DRESS CODE COLUMNS
+========================================= */
+
+.dress-columns {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 80px;
+
+    margin: 55px auto 45px;
+
+    max-width: 700px;
+
+}
+
+
+.dress-group {
+
+    padding: 25px;
+
+    border-top: 1px solid
+                rgba(198, 161, 91, 0.5);
+
+    border-bottom: 1px solid
+                rgba(198, 161, 91, 0.5);
+
+}
+
+
+.dress-group h5 {
+
+    color: #C6A15B;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.dress-group p {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.dress-note {
+
+    color: #666;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================
+   FINAL REMINDER
+========================================= */
+
+.details-reminder {
+
+    background: #FFF9ED;
+
+    text-align: center;
+
+    padding: 120px 25px;
+
+}
+
+
+.details-reminder h2 {
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    letter-spacing: 2px;
+
+    margin: 20px 0 30px;
+
+}
+
+
+.details-reminder > p:last-child {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .details-section {
+
+        padding: 70px 25px 80px;
+
+    }
+
+
+    .details-heading {
+
+        gap: 12px;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .details-heading h3 {
+
+        font-size: 18px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .details-heading span {
+
+        width: 45px;
+
+    }
+
+
+    .details-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .venue-details h4 {
+
+        font-size: 27px;
+
+    }
+
+
+    .venue-address {
+
+        font-size: 14px;
+
+    }
+
+
+    .dress-code h4 {
+
+        font-size: 34px;
+
+    }
+
+
+    .dress-columns {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 40px;
+
+    }
+
+
+    .details-reminder {
+
+        padding: 90px 25px;
+
+    }
+
+
+    .details-reminder h2 {
+
+        font-size: 38px;
+
+    }
+
+}
+
+/* =========================================
+   TROPICAL DRESS CODE
+========================================= */
+
+.dress-code-section {
+    background: #FFF9ED;
+}
+
+
+.dress-code {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.dress-symbol {
+    color: #C6A15B;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+.dress-label {
+    color: #C6A15B;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.dress-code h4 {
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.dress-description {
+
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================
+   DRESS CODE IMAGE
+========================================= */
+
+.dress-image {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+}
+
+
+.dress-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.dress-image:hover img {
+
+    transform: scale(1.02);
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .dress-code {
+
+        padding: 0 5px;
+
+    }
+
+    .dress-code h4 {
+
+        font-size: 32px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .dress-description {
+
+        font-size: 15px;
+
+        margin-bottom: 30px;
+
+    }
+
+    .dress-image {
+
+        width: 100%;
+
+    }
+
+    .dress-note {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-intro {
+    min-height: 430px;
+}
+
+
+/* =========================================
+   GALLERY SECTION
+========================================= */
+
+.gallery-section {
+
+    background: #FFF9ED;
+
+    padding: 80px 7% 110px;
+
+}
+
+
+/* =========================================
+   FEATURED PHOTO
+========================================= */
+
+.gallery-feature {
+
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+
+}
+
+
+.gallery-item {
+
+    display: block;
+
+    overflow: hidden;
+
+    background: #111;
+
+}
+
+
+.gallery-item img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    transition:
+        transform 0.7s ease;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================
+   FEATURE IMAGE
+========================================= */
+
+.gallery-feature .gallery-item {
+
+    max-height: 650px;
+
+}
+
+
+.gallery-feature .gallery-item img {
+
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.gallery-grid {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 70px 45px;
+
+}
+
+
+.gallery-card:nth-child(even) {
+
+    margin-top: 90px;
+
+}
+
+
+.gallery-card .gallery-item {
+
+    aspect-ratio: 4 / 5;
+
+}
+
+
+.gallery-card .gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   GALLERY CAPTION
+========================================= */
+
+.gallery-caption {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+}
+
+
+.gallery-caption span {
+
+    color: #C6A15B;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.gallery-caption p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.gallery-message {
+
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+    text-align: center;
+
+    padding: 120px 25px;
+
+}
+
+
+.gallery-message h2 {
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    letter-spacing: 2px;
+
+    margin: 20px 0 30px;
+
+}
+
+
+.gallery-message > p:last-child {
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.lightbox-overlay.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.lightbox-overlay img {
+
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    object-fit: contain;
+
+}
+
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    background: none;
+
+    border: none;
+
+    color: #FFF9ED;
+
+    font-size: 45px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .gallery-section {
+
+        padding: 60px 20px 80px;
+
+    }
+
+
+    .gallery-feature {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+    }
+
+
+    .gallery-card:nth-child(even) {
+
+        margin-top: 0;
+
+    }
+
+
+    .gallery-card .gallery-item {
+
+        aspect-ratio: 4 / 5;
+
+    }
+
+
+    .gallery-caption {
+
+        margin-top: 14px;
+
+    }
+
+
+    .gallery-message {
+
+        padding: 90px 25px;
+
+    }
+
+
+    .gallery-message h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .lightbox-overlay {
+
+        padding: 20px;
+
+    }
+
+
+    .lightbox-overlay img {
+
+        max-width: 95vw;
+
+        max-height: 85vh;
+
+    }
+
+
+    .lightbox-close {
+
+        top: 15px;
+
+        right: 20px;
+
+        font-size: 38px;
+
+    }
+
+}

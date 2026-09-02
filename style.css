@@ -1,4 +1,19 @@
 /* =========================================
+   JAPANESE PAGE
+========================================= */
+
+html[lang="ja"] {
+
+    font-family:
+        "Noto Serif JP",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+}
+
+
+/* =========================================
    GLOBAL
 ========================================= */
 
@@ -190,7 +205,7 @@ a {
 }
 
 .and {
-    color: #C6A15B;
+    color: #835602;
 
     font-family: cursive;
 
@@ -364,32 +379,6 @@ a {
 }
 
 
-/* =========================================
-   RSVP BUTTON
-========================================= */
-
-.rsvp-button {
-    display: inline-block;
-
-    padding: 13px 75px;
-
-    border: 1px solid #C6A15B;
-
-    color: #C6A15B;
-
-    font-size: 16px;
-
-    letter-spacing: 3px;
-
-    transition: all 0.3s ease;
-}
-
-.rsvp-button:hover {
-    background: #C6A15B;
-
-    color: #0D0D0D;
-}
-
 
 /* =========================================
    CONTENT SECTIONS
@@ -432,8 +421,8 @@ a {
     letter-spacing: 1px;
 }
 
-.section-label {
-    color: #C6A15B;
+.section-label { 
+    color: #523602; /*hereee*/
 
     font-size: 13px !important;
 
@@ -1921,6 +1910,251 @@ footer span {
         right: 20px;
 
         font-size: 38px;
+
+    }
+
+}
+
+/* =========================================
+   JAPANESE INVITATION
+========================================= */
+
+.japanese-section {
+
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+}
+
+
+.japanese-content {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+}
+
+
+.japanese-section .section-label {
+
+    color: #C6A15B;
+
+}
+
+
+.japanese-section h2 {
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+    margin: 20px 0 25px;
+
+}
+
+
+.japanese-section p:not(.section-label) {
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.japanese-button {
+
+    display: inline-block;
+
+    padding: 15px 45px;
+
+    border: 1px solid #C6A15B;
+
+    color: #FFF9ED;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.japanese-button:hover {
+
+    background: #C6A15B;
+
+    color: #0D0D0D;
+
+}
+
+
+/* =========================================
+   JAPANESE SECTION MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .japanese-section {
+
+        padding: 80px 25px;
+
+    }
+
+
+    .japanese-section h2 {
+
+        font-size: 32px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .japanese-section p:not(.section-label) {
+
+        font-size: 14px;
+
+    }
+
+
+    .japanese-button {
+
+        padding: 14px 30px;
+
+    }
+
+}
+
+/* =========================================
+   LANGUAGE SWITCH
+========================================= */
+
+.language-switch-section {
+
+    background: #0D0D0D;
+
+    color: #FFF9ED;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+}
+
+
+.language-switch-content {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+}
+
+
+.language-switch-section .section-label {
+
+    color: #C6A15B;
+
+}
+
+
+.language-switch-section h2 {
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin: 20px 0 25px;
+
+}
+
+
+.language-switch-section p:not(.section-label) {
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.language-switch-button {
+
+    display: inline-block;
+
+    padding: 15px 40px;
+
+    border: 1px solid #C6A15B;
+
+    color: #FFF9ED;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.language-switch-button:hover {
+
+    background: #C6A15B;
+
+    color: #0D0D0D;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .language-switch-section {
+
+        padding: 80px 25px;
+
+    }
+
+
+    .language-switch-section h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .language-switch-button {
+
+        padding: 14px 25px;
+
+        font-size: 11px;
 
     }
 
